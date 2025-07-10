@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Gestión de Pozas</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+</head>
+<body class="p-4">
+  <div class="container">
+    <h1 class="mb-4">Contraste de Flujos</h1>
+
+    <form action="/add_poza" method="POST" class="mb-4">
+      <div class="input-group">
+        <input type="text" name="poza_name" class="form-control" placeholder="Nueva poza" required>
+        <button class="btn btn-primary">Agregar poza</button>
+      </div>
+    </form>
+
+    {% for poza, bombas in data.items() %}
+      <div class="card mb-3">
+        <div class="card-header bg-info text-white d-flex justify-content-between align-items-center">
+          <strong>{{ poza }}</strong>
+          <form action="/delete_bomba/{{ poza }}/0" method="POST" onsubmit="return confirm('¿Eliminar toda la poza si no quedan bombas?');">
+            {% if bombas|length == 0 %}
+              <button class="btn btn-danger btn-sm">Eliminar</button>
+            {% endif %}
+          </form>
+        </div>
+        <div class="card-body">
+          <table class="table table-bordered">
+            <thead><tr><th>BOMBA</th><th>L/S</th><th>M3/H</th><th>Acción</th></tr></thead>
+            <tbody>
+              {% for bomba in bombas %}
+              <tr>
+                <td>{{ bomba["BOMBA"] }}</td>
+                <td>{{ bomba["L/S"] }}</td>
+                <td>{{ bomba["M3/H"] }}</td>
+                <td>
+                  <form action="/delete_bomba/{{ poza }}/{{ loop.index0 }}" method="POST" style="display:inline;">
+                    <button class="btn btn-sm btn-danger">Eliminar</button>
+                  </form>
+                </td>
+              </tr>
+              {% endfor %}
+            </tbody>
+          </table>
+          <form action="/add_bomba/{{ poza }}" method="POST" class="row g-2">
+            <div class="col-md-3">
+              <input name="bomba" class="form-control" placeholder="BOMBA" required>
+            </div>
+            <div class="col-md-3">
+              <input name="ls" type="number" step="0.1" class="form-control" placeholder="L/S">
+            </div>
+            <div class="col-md-3">
+              <input name="m3h" type="number" step="0.1" class="form-control" placeholder="M3/H">
+            </div>
+            <div class="col-md-3">
+              <button class="btn btn-success w-100">Agregar bomba</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    {% endfor %}
+  </div>
+</body>
+</html>

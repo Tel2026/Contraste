@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Contraste de flujos</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(135deg, #e0f7fa, #ffffff);
+      margin: 0;
+      padding: 2rem;
+    }
+
+    .container {
+      max-width: 800px;
+      margin: auto;
+      background: white;
+      padding: 2.5rem;
+      border-radius: 12px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+    }
+
+    h2 {
+      text-align: center;
+      color: #007BFF;
+      margin-bottom: 1.5rem;
+    }
+
+    select, button {
+      padding: 0.75rem;
+      font-size: 1rem;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+    }
+
+    select {
+      width: 100%;
+      margin-bottom: 1.5rem;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 1rem;
+    }
+
+    th, td {
+      padding: 0.9rem;
+      text-align: center;
+      border-bottom: 1px solid #eee;
+    }
+
+    th {
+      background-color: #007BFF;
+      color: white;
+    }
+
+    tr:nth-child(even) {
+      background-color: #f9f9f9;
+    }
+
+    .hidden {
+      display: none;
+    }
+
+    .back-btn {
+      background-color: #28a745;
+      color: white;
+      padding: 0.6rem 1.2rem;
+      text-decoration: none;
+      border: none;
+      border-radius: 6px;
+      font-weight: bold;
+      transition: background 0.2s ease-in-out;
+      margin-bottom: 1.5rem;
+      float: right;
+    }
+
+    .back-btn:hover {
+      background-color: #218838;
+    }
+
+    .clearfix::after {
+      content: "";
+      display: table;
+      clear: both;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="clearfix">
+      <a href="/index"><button class="back-btn">Ir a gestión</button></a>
+    </div>
+
+    <h2>Contraste de flujos</h2>
+
+    <label for="pozaSelect">Selecciona una poza:</label>
+    <select id="pozaSelect">
+      <option value="">-- Selecciona --</option>
+      {% for poza in pozas %}
+      <option value="{{ poza }}">{{ poza }}</option>
+      {% endfor %}
+    </select>
+
+    <table id="bombasTable" class="hidden">
+      <thead>
+        <tr>
+          <th>BOMBA</th>
+          <th>L/S</th>
+          <th>M3/H</th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+  </div>
+
+  <script>
+    document.getElementById('pozaSelect').addEventListener('change', async function () {
+      const poza = this.value;
+      const table = document.getElementById('bombasTable');
+      const tbody = table.querySelector('tbody');
+      tbody.innerHTML = '';
+      if (!poza) {
+        table.classList.add('hidden');
+        return;
+      }
+
+      const response = await fetch(`/poza/${encodeURIComponent(poza)}`);
+      const data = await response.json();
+
+      data.forEach(item => {
+        const row = document.createElement('tr');
+        row.innerHTML = `
+          <td>${item['BOMBA'] ?? ''}</td>
+          <td>${item['L/S'] ?? ''}</td>
+          <td>${item['M3/H'] ?? ''}</td>
+        `;
+        tbody.appendChild(row);
+      });
+
+      table.classList.remove('hidden');
+    });
+  </script>
+</body>
+</html>

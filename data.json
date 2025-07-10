@@ -1,0 +1,598 @@
+{
+  "LQ1": [
+    {
+      "BOMBA": "POS 1",
+      "L/S": NaN,
+      "M3/H": NaN,
+      "FECHA": null
+    }
+  ],
+  "LQ2": [
+    {
+      "BOMBA": "POS 1",
+      "L/S": NaN,
+      "M3/H": NaN,
+      "FECHA": null
+    }
+  ],
+  "VANESA": [
+    {
+      "BOMBA": "POS 1",
+      "L/S": 27.0,
+      "M3/H": NaN,
+      "FECHA": null
+    }
+  ],
+  "CAJAMARQUINA": [
+    {
+      "BOMBA": "POS 1",
+      "L/S": 70.0,
+      "M3/H": 252.0,
+      "FECHA": null
+    },
+    {
+      "BOMBA": "POS 2",
+      "L/S": 70.0,
+      "M3/H": 252.0,
+      "FECHA": null
+    },
+    {
+      "BOMBA": "POS 3",
+      "L/S": 113.0,
+      "M3/H": 407.0,
+      "FECHA": null
+    },
+    {
+      "BOMBA": "POS 4",
+      "L/S": 78.0,
+      "M3/H": 280.0,
+      "FECHA": null
+    },
+    {
+      "BOMBA": "POS 5",
+      "L/S": 90.0,
+      "M3/H": 324.0,
+      "FECHA": null
+    },
+    {
+      "BOMBA": "POS 6",
+      "L/S": 83.0,
+      "M3/H": 300.0,
+      "FECHA": null
+    }
+  ],
+  "CAJ\u00c3\u201cN": [
+    {
+      "BOMBA": "POS 1",
+      "L/S": 43.0,
+      "M3/H": 154.8,
+      "FECHA": null
+    }
+  ],
+  "TK REB SAHARA 2": [
+    {
+      "BOMBA": "POS 1",
+      "L/S": NaN,
+      "M3/H": NaN,
+      "FECHA": null
+    }
+  ],
+  "CHINO": [
+    {
+      "BOMBA": "POS 1",
+      "L/S": 84.0,
+      "M3/H": 302.0,
+      "FECHA": null
+    },
+    {
+      "BOMBA": "POS 2",
+      "L/S": 63.0,
+      "M3/H": 227.0,
+      "FECHA": null
+    }
+  ],
+  "ALICIA": [
+    {
+      "BOMBA": "POS 1",
+      "L/S": 79.0,
+      "M3/H": 284.0,
+      "FECHA": null
+    },
+    {
+      "BOMBA": "POS 2",
+      "L/S": 85.0,
+      "M3/H": 307.0,
+      "FECHA": null
+    }
+  ],
+  "LQPW 13": [
+    {
+      "BOMBA": "POS 1",
+      "L/S": 19.0,
+      "M3/H": 70.0,
+      "FECHA": "30/05/2025"
+    }
+  ],
+  "LQPW 34": [
+    {
+      "BOMBA": "POS 1",
+      "L/S": 6.0,
+      "M3/H": 20.0,
+      "FECHA": "30/05/2025"
+    }
+  ],
+  "LQPW 43": [
+    {
+      "BOMBA": "POS 1",
+      "L/S": 15.0,
+      "M3/H": 53.0,
+      "FECHA": "30/05/2025"
+    }
+  ],
+  "LQW 44": [
+    {
+      "BOMBA": "POS 1",
+      "L/S": 9.0,
+      "M3/H": 33.0,
+      "FECHA": "30/05/2025"
+    }
+  ],
+  "LQW 57": [
+    {
+      "BOMBA": "POS 1",
+      "L/S": 17.0,
+      "M3/H": 59.0,
+      "FECHA": "22/05/2025"
+    }
+  ],
+  "WOX CN": [
+    {
+      "BOMBA": "POS 1",
+      "L/S": 77.0,
+      "M3/H": 276.0,
+      "FECHA": null
+    },
+    {
+      "BOMBA": "POS 2",
+      "L/S": 74.0,
+      "M3/H": 265.0,
+      "FECHA": null
+    }
+  ],
+  "TK WOX CN": [
+    {
+      "BOMBA": "POS 1",
+      "L/S": NaN,
+      "M3/H": NaN,
+      "FECHA": null
+    },
+    {
+      "BOMBA": "POS 2",
+      "L/S": NaN,
+      "M3/H": NaN,
+      "FECHA": null
+    }
+  ],
+  "TOPW25": [
+    {
+      "BOMBA": "POS 1",
+      "L/S": 50.0,
+      "M3/H": 180.0,
+      "FECHA": "30/05/2025"
+    }
+  ],
+  "TOPW26": [
+    {
+      "BOMBA": "POS 1",
+      "L/S": 57.0,
+      "M3/H": 205.0,
+      "FECHA": "31/05/2025"
+    }
+  ],
+  "TOPW27": [
+    {
+      "BOMBA": "POS 1",
+      "L/S": 36.0,
+      "M3/H": 130.0,
+      "FECHA": "13/06/2025"
+    }
+  ],
+  "SPRING": [
+    {
+      "BOMBA": "POS 1",
+      "L/S": NaN,
+      "M3/H": NaN,
+      "FECHA": null
+    },
+    {
+      "BOMBA": "POS 2",
+      "L/S": NaN,
+      "M3/H": NaN,
+      "FECHA": null
+    }
+  ],
+  "TK SPRING": [
+    {
+      "BOMBA": "POS 1",
+      "L/S": NaN,
+      "M3/H": NaN,
+      "FECHA": null
+    },
+    {
+      "BOMBA": "POS 2",
+      "L/S": NaN,
+      "M3/H": NaN,
+      "FECHA": null
+    }
+  ],
+  "MILY": [
+    {
+      "BOMBA": "POS 1",
+      "L/S": NaN,
+      "M3/H": NaN,
+      "FECHA": null
+    }
+  ],
+  "TK MILY": [
+    {
+      "BOMBA": "POS 1",
+      "L/S": NaN,
+      "M3/H": NaN,
+      "FECHA": null
+    },
+    {
+      "BOMBA": "POS 2",
+      "L/S": NaN,
+      "M3/H": NaN,
+      "FECHA": null
+    }
+  ],
+  "NSJ01": [
+    {
+      "BOMBA": "POS 1",
+      "L/S": NaN,
+      "M3/H": NaN,
+      "FECHA": null
+    },
+    {
+      "BOMBA": "POS 2",
+      "L/S": NaN,
+      "M3/H": NaN,
+      "FECHA": null
+    }
+  ],
+  "NSJ02": [
+    {
+      "BOMBA": "POS 1",
+      "L/S": NaN,
+      "M3/H": NaN,
+      "FECHA": null
+    }
+  ],
+  "CHUGURANA 1": [
+    {
+      "BOMBA": "POS 1",
+      "L/S": NaN,
+      "M3/H": NaN,
+      "FECHA": null
+    }
+  ],
+  "SAN JOSE II": [
+    {
+      "BOMBA": "POS 1",
+      "L/S": NaN,
+      "M3/H": NaN,
+      "FECHA": null
+    }
+  ],
+  "ALMACENAMIENTO SUR": [
+    {
+      "BOMBA": "POS 1",
+      "L/S": NaN,
+      "M3/H": NaN,
+      "FECHA": null
+    },
+    {
+      "BOMBA": "POS 2",
+      "L/S": NaN,
+      "M3/H": NaN,
+      "FECHA": null
+    }
+  ],
+  "ALMACENAMIENTO NORTE": [
+    {
+      "BOMBA": "POS 1",
+      "L/S": 74,
+      "M3/H": 266,
+      "FECHA": null
+    },
+    {
+      "BOMBA": "POS 2",
+      "L/S": 87,
+      "M3/H": 313,
+      "FECHA": null
+    },
+    {
+      "BOMBA": "POS 1 y 2",
+      "L/S": 110,
+      "M3/H": 396,
+      "FECHA": null
+    }
+  ],
+  "MQ MQPW 02": [
+    {
+      "BOMBA": "POS 1",
+      "L/S": 41.0,
+      "M3/H": 148.0,
+      "FECHA": "19/06//2025"
+    }
+  ],
+  "MQ MQPW 05": [
+    {
+      "BOMBA": "POS 1",
+      "L/S": 37.0,
+      "M3/H": 133.0,
+      "FECHA": "19/06//2026"
+    }
+  ],
+  "CHUGURANA 2": [
+    {
+      "BOMBA": "POS 1",
+      "L/S": 45.0,
+      "M3/H": 252.0,
+      "FECHA": null
+    },
+    {
+      "BOMBA": "POS 2",
+      "L/S": 50.0,
+      "M3/H": 252.0,
+      "FECHA": null
+    },
+    {
+      "BOMBA": "POS 3",
+      "L/S": 45.0,
+      "M3/H": 252.0,
+      "FECHA": null
+    }
+  ],
+  "TR5": [
+    {
+      "BOMBA": "POS 1",
+      "L/S": 93.0,
+      "M3/H": 335.0,
+      "FECHA": "7/02/2025"
+    },
+    {
+      "BOMBA": "POS 2",
+      "L/S": 100.0,
+      "M3/H": 360.0,
+      "FECHA": "7/02/2025"
+    },
+    {
+      "BOMBA": "POS 3",
+      "L/S": 96.0,
+      "M3/H": 346.0,
+      "FECHA": "7/02/2025"
+    },
+    {
+      "BOMBA": "POS 4",
+      "L/S": 101.0,
+      "M3/H": 364.0,
+      "FECHA": "7/02/2025"
+    }
+  ],
+  "SUMP CHAQUICOCHA": [
+    {
+      "BOMBA": "POS 1",
+      "L/S": 43.0,
+      "M3/H": 155.0,
+      "FECHA": "6/02/2025"
+    },
+    {
+      "BOMBA": "POS 3",
+      "L/S": 45.0,
+      "M3/H": 162.0,
+      "FECHA": "6/02/2025"
+    },
+    {
+      "BOMBA": "POS 4",
+      "L/S": 40.0,
+      "M3/H": 144.0,
+      "FECHA": "6/02/2025"
+    },
+    {
+      "BOMBA": "POS 1 Y 3",
+      "L/S": 87.0,
+      "M3/H": 313.0,
+      "FECHA": "6/02/2025"
+    }
+  ],
+  "CHQPW 22": [
+    {
+      "BOMBA": "POS 1",
+      "L/S": 31.0,
+      "M3/H": 112.0,
+      "FECHA": null
+    }
+  ],
+  "CHQPW 24": [
+    {
+      "BOMBA": "POS 1",
+      "L/S": 14.0,
+      "M3/H": 50.0,
+      "FECHA": null
+    }
+  ],
+  "CHQPW 25": [
+    {
+      "BOMBA": "POS 1",
+      "L/S": 32.0,
+      "M3/H": 115.0,
+      "FECHA": null
+    }
+  ],
+  "CHQPW 26": [
+    {
+      "BOMBA": "POS 1",
+      "L/S": 29.0,
+      "M3/H": 104.0,
+      "FECHA": null
+    }
+  ],
+  "CHQPW 27": [
+    {
+      "BOMBA": "POS 1",
+      "L/S": 42.0,
+      "M3/H": 151.0,
+      "FECHA": null
+    }
+  ],
+  "CHQPW 28": [
+    {
+      "BOMBA": "POS 1",
+      "L/S": 47.0,
+      "M3/H": 169.0,
+      "FECHA": null
+    }
+  ],
+  "UNDERGROUND": [
+    {
+      "BOMBA": "POS 1",
+      "L/S": 88.0,
+      "M3/H": 317.0,
+      "FECHA": "7/02/2025"
+    },
+    {
+      "BOMBA": "POS 2",
+      "L/S": 85.0,
+      "M3/H": 306.0,
+      "FECHA": "7/02/2025"
+    },
+    {
+      "BOMBA": "POS 3",
+      "L/S": 83.0,
+      "M3/H": 299.0,
+      "FECHA": "7/02/2025"
+    },
+    {
+      "BOMBA": "POS 4",
+      "L/S": 71.0,
+      "M3/H": 256.0,
+      "FECHA": "7/02/2025"
+    }
+  ],
+  "YENI": [
+    {
+      "BOMBA": "POS 1",
+      "L/S": 100.0,
+      "M3/H": 360.0,
+      "FECHA": "12/01/2025"
+    },
+    {
+      "BOMBA": "POS 2",
+      "L/S": 128.0,
+      "M3/H": 461.0,
+      "FECHA": "12/01/2025"
+    },
+    {
+      "BOMBA": "POS 3",
+      "L/S": 133.0,
+      "M3/H": 479.0,
+      "FECHA": "12/01/2025"
+    },
+    {
+      "BOMBA": "POS 4",
+      "L/S": 130.0,
+      "M3/H": 468.0,
+      "FECHA": "12/01/2025"
+    }
+  ],
+  "VERONICA": [
+    {
+      "BOMBA": "POS 1",
+      "L/S": 119.0,
+      "M3/H": 428.0,
+      "FECHA": "12/01/2025"
+    },
+    {
+      "BOMBA": "POS 2",
+      "L/S": 121.0,
+      "M3/H": 436.0,
+      "FECHA": "12/01/2025"
+    },
+    {
+      "BOMBA": "POS 3",
+      "L/S": 136.0,
+      "M3/H": 490.0,
+      "FECHA": "12/01/2025"
+    }
+  ],
+  "SUMP GRAVAS": [
+    {
+      "BOMBA": "POS 1",
+      "L/S": 49.0,
+      "M3/H": 176.0,
+      "FECHA": "9/03/2025"
+    },
+    {
+      "BOMBA": "POS 2",
+      "L/S": 47.0,
+      "M3/H": 169.0,
+      "FECHA": "9/03/2025"
+    }
+  ],
+  "SUR GRAVAS": [
+    {
+      "BOMBA": "POS 1",
+      "L/S": NaN,
+      "M3/H": NaN,
+      "FECHA": null
+    },
+    {
+      "BOMBA": "POS 2",
+      "L/S": 46.0,
+      "M3/H": 166.0,
+      "FECHA": "9/03/2025"
+    }
+  ],
+  "TR6": [
+    {
+      "BOMBA": "POS 1",
+      "L/S": NaN,
+      "M3/H": NaN,
+      "FECHA": null
+    }
+  ],
+  "QMPW 01": [
+    {
+      "BOMBA": "POS 1",
+      "L/S": 23.0,
+      "M3/H": 82.8,
+      "FECHA": null
+    }
+  ],
+  "CHQPW 10": [
+    {
+      "BOMBA": "POS 1",
+      "L/S": 9.0,
+      "M3/H": 32.4,
+      "FECHA": null
+    }
+  ],
+  "CHQPW 15": [
+    {
+      "BOMBA": "POS 1",
+      "L/S": 11.0,
+      "M3/H": 39.6,
+      "FECHA": null
+    }
+  ],
+  "CHQPW 21": [
+    {
+      "BOMBA": "POS 1",
+      "L/S": 29.0,
+      "M3/H": 104.4,
+      "FECHA": null
+    }
+]
+}
