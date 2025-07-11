@@ -18,7 +18,15 @@ def save_data(data):
 @app.route('/')
 def vista():
     data = load_data()
-    return render_template('vista.html', pozas=data.keys())
+    zonas = set()
+
+    for bombas in data.values():
+        if bombas and isinstance(bombas, list) and isinstance(bombas[0], dict):
+            zona = bombas[0].get("ZONA")
+            if zona:
+                zonas.add(zona)
+
+    return render_template('vista.html', data=data, zonas=sorted(zonas))
 
 # Ruta del login
 @app.route('/login', methods=['GET', 'POST'])
@@ -50,11 +58,23 @@ def logout():
 def add_poza():
     if 'user' not in session:
         return redirect(url_for('login'))
+
     name = request.form.get('poza_name')
+    zona = request.form.get('zona')
+
     data = load_data()
+
     if name and name not in data:
-        data[name] = []
+        data[name] = [{
+            "BOMBA": "",
+            "L/S": None,
+            "M3/H": None,
+            "FECHA": None,
+            "DESTINO": "",
+            "ZONA": zona
+        }]
         save_data(data)
+
     return redirect(url_for('index'))
 
 # Agregar bomba a poza
@@ -62,15 +82,20 @@ def add_poza():
 def add_bomba(poza):
     if 'user' not in session:
         return redirect(url_for('login'))
+
     bomba = {
         "BOMBA": request.form.get('bomba'),
-        "L/S": float(request.form.get('ls', 0)),
-        "M3/H": float(request.form.get('m3h', 0))
+        "L/S": float(request.form.get('ls', 0)) if request.form.get('ls') else None,
+        "M3/H": float(request.form.get('m3h', 0)) if request.form.get('m3h') else None,
+        "DESTINO": request.form.get('destino'),
+        "FECHA": None
     }
+
     data = load_data()
     if poza in data:
         data[poza].append(bomba)
         save_data(data)
+
     return redirect(url_for('index'))
 
 # Eliminar bomba
@@ -91,6 +116,43 @@ def delete_bomba(poza, index):
 def get_poza(poza):
     data = load_data()
     return jsonify(data.get(poza, []))
+@app.route('/edit_bomba/<poza>/<int:index>', methods=['POST'])
+def edit_bomba(poza, index):
+    if 'user' not in session:
+        return redirect(url_for('login'))
+
+    data = load_data()
+
+    if poza not in data or not (0 <= index < len(data[poza])):
+        return redirect(url_for('index'))
+
+    bomba_actual = data[poza][index]
+
+    bomba = {
+        "BOMBA": request.form.get("bomba"),
+        "L/S": float(request.form.get("ls", 0)) if request.form.get("ls") else None,
+        "M3/H": float(request.form.get("m3h", 0)) if request.form.get("m3h") else None,
+        "DESTINO": request.form.get("destino"),
+        "FECHA": bomba_actual.get("FECHA")  # conserva la fecha si existe
+    }
+
+    data[poza][index] = bomba
+    save_data(data)
+
+    return redirect(url_for('index'))
+@app.route('/editar_zona/<poza>', methods=['POST'])
+def editar_zona(poza):
+    if 'user' not in session:
+        return redirect(url_for('login'))
+
+    nueva_zona = request.form.get('zona')
+    data = load_data()
+    if poza in data:
+        for bomba in data[poza]:
+            bomba["ZONA"] = nueva_zona
+        save_data(data)
+    return redirect(url_for('index'))
+
 
 if __name__ == '__main__':
     port = int(os.environ.get("PORT", 5000))
