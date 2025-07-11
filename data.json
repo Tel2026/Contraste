@@ -2,25 +2,11 @@
   "LQ1": [
     {
       "BOMBA": "POS 1",
-      "L/S": NaN,
-      "M3/H": NaN,
-      "FECHA": null
-    }
-  ],
-  "LQ2": [
-    {
-      "BOMBA": "POS 1",
-      "L/S": NaN,
-      "M3/H": NaN,
-      "FECHA": null
-    }
-  ],
-  "VANESA": [
-    {
-      "BOMBA": "POS 1",
-      "L/S": 27.0,
-      "M3/H": NaN,
-      "FECHA": null
+      "L/S": null,
+      "M3/H": null,
+      "DESTINO": "LQ2",
+      "FECHA": null,
+      "ZONA": "Descargas Oeste"
     }
   ],
   "CAJAMARQUINA": [
@@ -28,53 +14,59 @@
       "BOMBA": "POS 1",
       "L/S": 70.0,
       "M3/H": 252.0,
-      "FECHA": null
+      "DESTINO": "RETENTION POND",
+      "FECHA": null,
+      "ZONA": "Descargas Oeste"
     },
     {
       "BOMBA": "POS 2",
       "L/S": 70.0,
       "M3/H": 252.0,
-      "FECHA": null
+      "DESTINO": "RETENTION POND",
+      "FECHA": null,
+      "ZONA": "Descargas Oeste"
     },
     {
       "BOMBA": "POS 3",
       "L/S": 113.0,
       "M3/H": 407.0,
-      "FECHA": null
+      "DESTINO": "RETENTION POND",
+      "FECHA": null,
+      "ZONA": "Descargas Oeste"
     },
     {
       "BOMBA": "POS 4",
       "L/S": 78.0,
       "M3/H": 280.0,
-      "FECHA": null
+      "DESTINO": "RETENTION POND",
+      "FECHA": null,
+      "ZONA": "Descargas Oeste"
     },
     {
       "BOMBA": "POS 5",
       "L/S": 90.0,
       "M3/H": 324.0,
-      "FECHA": null
+      "DESTINO": "RETENTION POND",
+      "FECHA": null,
+      "ZONA": "Descargas Oeste"
     },
     {
       "BOMBA": "POS 6",
       "L/S": 83.0,
       "M3/H": 300.0,
-      "FECHA": null
+      "DESTINO": "RETENTION POND",
+      "FECHA": null,
+      "ZONA": "Descargas Oeste"
     }
   ],
-  "CAJ\u00c3\u201cN": [
+  "CAJON": [
     {
       "BOMBA": "POS 1",
       "L/S": 43.0,
       "M3/H": 154.8,
-      "FECHA": null
-    }
-  ],
-  "TK REB SAHARA 2": [
-    {
-      "BOMBA": "POS 1",
-      "L/S": NaN,
-      "M3/H": NaN,
-      "FECHA": null
+      "DESTINO": "SIF\u00d3N",
+      "FECHA": null,
+      "ZONA": "Colecci\u00f3n Oeste"
     }
   ],
   "CHINO": [
@@ -82,13 +74,17 @@
       "BOMBA": "POS 1",
       "L/S": 84.0,
       "M3/H": 302.0,
-      "FECHA": null
+      "DESTINO": "SIF\u00d3N",
+      "FECHA": null,
+      "ZONA": "Colecci\u00f3n Oeste"
     },
     {
       "BOMBA": "POS 2",
       "L/S": 63.0,
       "M3/H": 227.0,
-      "FECHA": null
+      "DESTINO": "SIF\u00d3N",
+      "FECHA": null,
+      "ZONA": "Colecci\u00f3n Oeste"
     }
   ],
   "ALICIA": [
@@ -96,29 +92,17 @@
       "BOMBA": "POS 1",
       "L/S": 79.0,
       "M3/H": 284.0,
-      "FECHA": null
+      "DESTINO": "RETENTION POND",
+      "FECHA": null,
+      "ZONA": "Colecci\u00f3n Oeste"
     },
     {
       "BOMBA": "POS 2",
       "L/S": 85.0,
       "M3/H": 307.0,
-      "FECHA": null
-    }
-  ],
-  "LQPW 13": [
-    {
-      "BOMBA": "POS 1",
-      "L/S": 19.0,
-      "M3/H": 70.0,
-      "FECHA": "30/05/2025"
-    }
-  ],
-  "LQPW 34": [
-    {
-      "BOMBA": "POS 1",
-      "L/S": 6.0,
-      "M3/H": 20.0,
-      "FECHA": "30/05/2025"
+      "DESTINO": "RETENTION POND",
+      "FECHA": null,
+      "ZONA": "Colecci\u00f3n Oeste"
     }
   ],
   "LQPW 43": [
@@ -126,7 +110,8 @@
       "BOMBA": "POS 1",
       "L/S": 15.0,
       "M3/H": 53.0,
-      "FECHA": "30/05/2025"
+      "FECHA": "30/05/2025",
+      "ZONA": "Colecci\u00f3n Oeste"
     }
   ],
   "LQW 44": [
@@ -134,7 +119,8 @@
       "BOMBA": "POS 1",
       "L/S": 9.0,
       "M3/H": 33.0,
-      "FECHA": "30/05/2025"
+      "FECHA": "30/05/2025",
+      "ZONA": "Colecci\u00f3n Oeste"
     }
   ],
   "LQW 57": [
@@ -142,7 +128,8 @@
       "BOMBA": "POS 1",
       "L/S": 17.0,
       "M3/H": 59.0,
-      "FECHA": "22/05/2025"
+      "FECHA": "22/05/2025",
+      "ZONA": "Colecci\u00f3n Oeste"
     }
   ],
   "WOX CN": [
@@ -150,13 +137,15 @@
       "BOMBA": "POS 1",
       "L/S": 77.0,
       "M3/H": 276.0,
-      "FECHA": null
+      "FECHA": null,
+      "ZONA": "Descargas Oeste"
     },
     {
       "BOMBA": "POS 2",
       "L/S": 74.0,
       "M3/H": 265.0,
-      "FECHA": null
+      "FECHA": null,
+      "ZONA": "Descargas Oeste"
     }
   ],
   "TK WOX CN": [
@@ -164,13 +153,15 @@
       "BOMBA": "POS 1",
       "L/S": NaN,
       "M3/H": NaN,
-      "FECHA": null
+      "FECHA": null,
+      "ZONA": "Descargas Oeste"
     },
     {
       "BOMBA": "POS 2",
       "L/S": NaN,
       "M3/H": NaN,
-      "FECHA": null
+      "FECHA": null,
+      "ZONA": "Descargas Oeste"
     }
   ],
   "TOPW25": [
@@ -178,7 +169,8 @@
       "BOMBA": "POS 1",
       "L/S": 50.0,
       "M3/H": 180.0,
-      "FECHA": "30/05/2025"
+      "FECHA": "30/05/2025",
+      "ZONA": "Colecci\u00f3n Oeste"
     }
   ],
   "TOPW26": [
@@ -186,7 +178,8 @@
       "BOMBA": "POS 1",
       "L/S": 57.0,
       "M3/H": 205.0,
-      "FECHA": "31/05/2025"
+      "FECHA": "31/05/2025",
+      "ZONA": "Colecci\u00f3n Oeste"
     }
   ],
   "TOPW27": [
@@ -194,7 +187,8 @@
       "BOMBA": "POS 1",
       "L/S": 36.0,
       "M3/H": 130.0,
-      "FECHA": "13/06/2025"
+      "FECHA": "13/06/2025",
+      "ZONA": "Colecci\u00f3n Oeste"
     }
   ],
   "SPRING": [
@@ -202,13 +196,15 @@
       "BOMBA": "POS 1",
       "L/S": NaN,
       "M3/H": NaN,
-      "FECHA": null
+      "FECHA": null,
+      "ZONA": "Descargas Este"
     },
     {
       "BOMBA": "POS 2",
       "L/S": NaN,
       "M3/H": NaN,
-      "FECHA": null
+      "FECHA": null,
+      "ZONA": "Descargas Este"
     }
   ],
   "TK SPRING": [
@@ -228,8 +224,9 @@
   "MILY": [
     {
       "BOMBA": "POS 1",
-      "L/S": NaN,
-      "M3/H": NaN,
+      "L/S": null,
+      "M3/H": null,
+      "DESTINO": "",
       "FECHA": null
     }
   ],
@@ -290,13 +287,15 @@
       "BOMBA": "POS 1",
       "L/S": NaN,
       "M3/H": NaN,
-      "FECHA": null
+      "FECHA": null,
+      "ZONA": "Descargas Este"
     },
     {
       "BOMBA": "POS 2",
       "L/S": NaN,
       "M3/H": NaN,
-      "FECHA": null
+      "FECHA": null,
+      "ZONA": "Descargas Este"
     }
   ],
   "ALMACENAMIENTO NORTE": [
@@ -304,19 +303,22 @@
       "BOMBA": "POS 1",
       "L/S": 74,
       "M3/H": 266,
-      "FECHA": null
+      "FECHA": null,
+      "ZONA": "Colecci\u00f3n Este"
     },
     {
       "BOMBA": "POS 2",
       "L/S": 87,
       "M3/H": 313,
-      "FECHA": null
+      "FECHA": null,
+      "ZONA": "Colecci\u00f3n Este"
     },
     {
       "BOMBA": "POS 1 y 2",
       "L/S": 110,
       "M3/H": 396,
-      "FECHA": null
+      "FECHA": null,
+      "ZONA": "Colecci\u00f3n Este"
     }
   ],
   "MQ MQPW 02": [
@@ -324,7 +326,8 @@
       "BOMBA": "POS 1",
       "L/S": 41.0,
       "M3/H": 148.0,
-      "FECHA": "19/06//2025"
+      "FECHA": "19/06//2025",
+      "ZONA": "Colecci\u00f3n Oeste"
     }
   ],
   "MQ MQPW 05": [
@@ -594,5 +597,73 @@
       "M3/H": 104.4,
       "FECHA": null
     }
-]
+  ],
+  "Vanesa": [
+    {
+      "BOMBA": "Pos 1",
+      "L/S": 52.7,
+      "M3/H": 190.0
+    },
+    {
+      "BOMBA": "Pos 2",
+      "L/S": 38.0,
+      "M3/H": 137.0
+    }
+  ],
+  "SAHARA": [
+    {
+      "BOMBA": "TK 1",
+      "L/S": null,
+      "M3/H": null,
+      "DESTINO": "RETENTION POND",
+      "FECHA": null,
+      "ZONA": "Colecci\u00f3n Oeste"
+    },
+    {
+      "BOMBA": "TK 2",
+      "L/S": null,
+      "M3/H": null,
+      "DESTINO": "RETENTION POND",
+      "FECHA": null,
+      "ZONA": "Colecci\u00f3n Oeste"
+    },
+    {
+      "BOMBA": "TK 3",
+      "L/S": null,
+      "M3/H": null,
+      "DESTINO": "RETENTION POND",
+      "FECHA": null,
+      "ZONA": "Colecci\u00f3n Oeste"
+    }
+  ],
+  "LQ2": [
+    {
+      "BOMBA": "POS 1",
+      "L/S": null,
+      "M3/H": null,
+      "DESTINO": "SERPENTIN ",
+      "FECHA": null,
+      "ZONA": "Descargas Oeste"
+    }
+  ],
+  "LQPW 13RR": [
+    {
+      "BOMBA": "POS 1",
+      "L/S": null,
+      "M3/H": null,
+      "DESTINO": "CHINO",
+      "FECHA": null,
+      "ZONA": "Colecci\u00f3n Oeste"
+    }
+  ],
+  "LQPW 34": [
+    {
+      "BOMBA": "POS 1",
+      "L/S": null,
+      "M3/H": null,
+      "DESTINO": "CHINO",
+      "FECHA": null,
+      "ZONA": "Colecci\u00f3n Oeste"
+    }
+  ]
 }
