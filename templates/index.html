@@ -4,63 +4,156 @@
   <meta charset="UTF-8">
   <title>Gestión de Pozas</title>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+  <script>
+    function toggleEdit(poza, index) {
+      document.querySelectorAll(`.display-${poza}-${index}`).forEach(el => el.style.display = 'none');
+      document.querySelectorAll(`.edit-${poza}-${index}`).forEach(el => el.style.display = 'table-cell');
+    }
+  </script>
 </head>
 <body class="p-4">
   <div class="container">
     <h1 class="mb-4">Contraste de Flujos</h1>
 
-    <form action="/add_poza" method="POST" class="mb-4">
-      <div class="input-group">
+    <form action="/add_poza" method="POST" class="mb-4 row g-2">
+      <div class="col-md-6">
         <input type="text" name="poza_name" class="form-control" placeholder="Nueva poza" required>
-        <button class="btn btn-primary">Agregar poza</button>
       </div>
-    </form>
+      <div class="col-md-4">
+        <select name="zona" class="form-select" required>
+          <option value="" disabled selected>Selecciona zona</option>
+          <option value="Colección Oeste">Colección Oeste</option>
+          <option value="Colección Este">Colección Este</option>
+          <option value="Descargas Oeste">Descargas Oeste</option>
+          <option value="Descargas Este">Descargas Este</option>
+        </select>
+      </div>
+      <div class="col-md-2">
+        <button class="btn btn-primary w-100">Agregar poza</button>
+      </div>
+    </form>    
 
     {% for poza, bombas in data.items() %}
       <div class="card mb-3">
         <div class="card-header bg-info text-white d-flex justify-content-between align-items-center">
-          <strong>{{ poza }}</strong>
-          <form action="/delete_bomba/{{ poza }}/0" method="POST" onsubmit="return confirm('¿Eliminar toda la poza si no quedan bombas?');">
-            {% if bombas|length == 0 %}
-              <button class="btn btn-danger btn-sm">Eliminar</button>
+          <div>
+            <strong>{{ poza }}</strong>
+            {% if bombas and bombas[0]["ZONA"] %}
+              <small class="ms-2">(Zona: {{ bombas[0]["ZONA"] }})</small>
+            {% else %}
+              <small class="ms-2 text-warning">(Sin zona)</small>
             {% endif %}
+          </div>
+          <div class="d-flex align-items-center gap-2">
+            <button class="btn btn-sm btn-light text-dark" onclick="mostrarZonaForm('{{ poza }}')">Editar zona</button>
+            {% if bombas|length == 0 %}
+            <form action="/delete_bomba/{{ poza }}/0" method="POST" onsubmit="return confirm('¿Eliminar toda la poza si no quedan bombas?');">
+              <button class="btn btn-danger btn-sm">Eliminar</button>
+            </form>
+            {% endif %}
+          </div>
+        </div>
+        
+        <!-- Formulario oculto para editar zona -->
+        <div class="p-2 d-none" id="form-zona-{{ poza }}">
+          <form action="/editar_zona/{{ poza }}" method="POST" class="row g-2">
+            <div class="col-md-8">
+              <select name="zona" class="form-select" required>
+                <option disabled selected>Selecciona zona</option>
+                <option value="Colección Oeste">Colección Oeste</option>
+                <option value="Colección Este">Colección Este</option>
+                <option value="Descargas Oeste">Descargas Oeste</option>
+                <option value="Descargas Este">Descargas Este</option>
+              </select>
+            </div>
+            <div class="col-md-4">
+              <button class="btn btn-success w-100">Guardar</button>
+            </div>
           </form>
         </div>
+        
         <div class="card-body">
           <table class="table table-bordered">
-            <thead><tr><th>BOMBA</th><th>L/S</th><th>M3/H</th><th>Acción</th></tr></thead>
+            <thead>
+              <tr>
+                <th>BOMBA</th>
+                <th>L/S</th>
+                <th>M3/H</th>
+                <th>Destino</th>
+                <th>Acción</th>
+              </tr>
+            </thead>
             <tbody>
               {% for bomba in bombas %}
               <tr>
-                <td>{{ bomba["BOMBA"] }}</td>
-                <td>{{ bomba["L/S"] }}</td>
-                <td>{{ bomba["M3/H"] }}</td>
-                <td>
-                  <form action="/delete_bomba/{{ poza }}/{{ loop.index0 }}" method="POST" style="display:inline;">
-                    <button class="btn btn-sm btn-danger">Eliminar</button>
+                <tr>
+                  <!-- MODO VISTA -->
+                  <td class="display-{{ poza|replace(' ', '_') }}-{{ loop.index0 }}">{{ bomba["BOMBA"] }}</td>
+                  <td class="display-{{ poza|replace(' ', '_') }}-{{ loop.index0 }}">{{ bomba["L/S"] }}</td>
+                  <td class="display-{{ poza|replace(' ', '_') }}-{{ loop.index0 }}">{{ bomba["M3/H"] }}</td>
+                  <td class="display-{{ poza|replace(' ', '_') }}-{{ loop.index0 }}">{{ bomba["DESTINO"] }}</td>
+                  <td class="display-{{ poza|replace(' ', '_') }}-{{ loop.index0 }}">
+                    <form action="/delete_bomba/{{ poza }}/{{ loop.index0 }}" method="POST" style="display:inline;">
+                      <button class="btn btn-sm btn-danger">Eliminar</button>
+                    </form>
+                    <button class="btn btn-sm btn-warning" onclick="toggleEdit('{{ poza|replace(' ', '_') }}', {{ loop.index0 }})">Editar</button>
+                  </td>
+                
+                  <!-- MODO EDICIÓN -->
+                  <form action="/edit_bomba/{{ poza }}/{{ loop.index0 }}" method="POST">
+                    <td class="edit-{{ poza|replace(' ', '_') }}-{{ loop.index0 }}" style="display:none;">
+                      <input name="bomba" class="form-control form-control-sm" value="{{ bomba['BOMBA'] }}">
+                    </td>
+                    <td class="edit-{{ poza|replace(' ', '_') }}-{{ loop.index0 }}" style="display:none;">
+                      <input name="ls" type="number" step="0.1" class="form-control form-control-sm" value="{{ bomba['L/S'] }}">
+                    </td>
+                    <td class="edit-{{ poza|replace(' ', '_') }}-{{ loop.index0 }}" style="display:none;">
+                      <input name="m3h" type="number" step="0.1" class="form-control form-control-sm" value="{{ bomba['M3/H'] }}">
+                    </td>
+                    <td class="edit-{{ poza|replace(' ', '_') }}-{{ loop.index0 }}" style="display:none;">
+                      <input name="destino" class="form-control form-control-sm" value="{{ bomba['DESTINO'] }}">
+                    </td>
+                    <td class="edit-{{ poza|replace(' ', '_') }}-{{ loop.index0 }}" style="display:none;">
+                      <button class="btn btn-sm btn-success">Guardar</button>
+                    </td>
                   </form>
-                </td>
-              </tr>
+                </tr>                
               {% endfor %}
             </tbody>
           </table>
+
+          <!-- FORMULARIO NUEVA BOMBA -->
           <form action="/add_bomba/{{ poza }}" method="POST" class="row g-2">
             <div class="col-md-3">
               <input name="bomba" class="form-control" placeholder="BOMBA" required>
             </div>
-            <div class="col-md-3">
+            <div class="col-md-2">
               <input name="ls" type="number" step="0.1" class="form-control" placeholder="L/S">
             </div>
-            <div class="col-md-3">
+            <div class="col-md-2">
               <input name="m3h" type="number" step="0.1" class="form-control" placeholder="M3/H">
             </div>
             <div class="col-md-3">
+              <input name="destino" class="form-control" placeholder="Destino">
+            </div>
+            <div class="col-md-2">
               <button class="btn btn-success w-100">Agregar bomba</button>
             </div>
           </form>
+
         </div>
       </div>
     {% endfor %}
   </div>
+  <script>
+    function mostrarZonaForm(poza) {
+      const form = document.getElementById(`form-zona-${poza}`);
+      if (form.classList.contains('d-none')) {
+        form.classList.remove('d-none');
+      } else {
+        form.classList.add('d-none');
+      }
+    }
+  </script>
 </body>
 </html>
